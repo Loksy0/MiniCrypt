@@ -1,24 +1,24 @@
 # MiniCrypt
 
-MiniCrypt to wielofunkcyjne narzędzie CLI do szyfrowania, deszyfrowania, kodowania i generowania hashy oraz losowych ciągów znaków. Zawiera wiele popularnych algorytmów kryptograficznych i szyfrowania, które można używać zarówno interaktywnie, jak i z poziomu argumentów wiersza poleceń.
+MiniCrypt is a multifunctional CLI tool for encryption, decryption, encoding, hash generation, and random string creation. It includes many popular cryptographic algorithms and ciphers that can be used both interactively and via command-line arguments.
 
 ---
 
-## Funkcje
+## Features
 
-- **Base64** — kodowanie i dekodowanie tekstu.
-- **AES (CBC)** — symetryczne szyfrowanie i odszyfrowywanie w trybie CBC (AES-128).
-- **RSA** — szyfrowanie, deszyfrowanie oraz generowanie par kluczy RSA (2048-bit).
-- **Hash** — generowanie hashy MD5, SHA-1, SHA-256, SHA-512.
-- **Caesar Cipher** — szyfrowanie i odszyfrowywanie szyfrem Cezara z podanym przesunięciem.
-- **Vigenere Cipher** — szyfrowanie i odszyfrowywanie szyfrem Vigenere z możliwością podania klucza.
-- **String Generator** — generowanie losowych ciągów znaków z możliwością wyboru znaków: symbole, cyfry, małe i wielkie litery.
+- **Base64** — text encoding and decoding.
+- **AES (CBC)** — symmetric encryption and decryption in CBC mode (AES-128).
+- **RSA** — encryption, decryption, and RSA key pair generation (2048-bit).
+- **Hash** — generating MD5, SHA-1, SHA-256, and SHA-512 hashes.
+- **Caesar Cipher** — encryption and decryption using Caesar cipher with a specified shift.
+- **Vigenere Cipher** — encryption and decryption using Vigenere cipher with a user-provided key.
+- **String Generator** — generates random strings with selectable characters: symbols, digits, lowercase and uppercase letters.
 
 ---
 
-## Instalacja
+## Installation
 
-Narzędzie wymaga Pythona 3 oraz bibliotek:
+The tool requires Python 3 and the following libraries:
 
 ```bash
 pip install pycryptodome cryptography
@@ -26,23 +26,23 @@ pip install pycryptodome cryptography
 
 ---
 
-## Użycie
+## Usage
 
-MiniCrypt można uruchomić w dwóch trybach:
+MiniCrypt can be run in two modes:
 
-- **Interaktywnym menu** (uruchomienie bez argumentów):
+- **Interactive menu** (run without arguments):
 
 ```bash
 python minicypt.py
 ```
 
-- **Z argumentami CLI** dla szybkiego wykonania konkretnej operacji.
+- **With CLI arguments** for quickly performing specific operations.
 
 ---
 
-## Przykłady użycia z CLI
+## CLI Usage Examples
 
-### 1. Base64 - kodowanie tekstu
+### 1. Base64 — encode text
 
 ```bash
 python minicypt.py base64 encode "Hello World"
@@ -54,9 +54,9 @@ python minicypt.py base64 encode "Hello World"
 SGVsbG8gV29ybGQ=
 ```
 
-### 2. AES - szyfrowanie tekstu
+### 2. AES — encrypt text
 
-Generowanie losowego klucza i wektora inicjalizującego (IV):
+Generates a random key and initialization vector (IV):
 
 ```bash
 python minicypt.py aes encrypt "My secret message"
@@ -65,22 +65,22 @@ python minicypt.py aes encrypt "My secret message"
 **Output:**
 
 ```
-Encrypted Text: <zakodowany tekst base64>
-Key (base64): <klucz base64>
-IV  (base64): <IV base64>
+Encrypted Text: <base64 encoded ciphertext>
+Key (base64): <base64 encoded key>
+IV  (base64): <base64 encoded IV>
 ```
 
-Aby odszyfrować tekst, użyj:
+To decrypt, use:
 
 ```bash
-python minicypt.py aes decrypt <zakodowany_tekst> --key <klucz_base64> --iv <IV_base64>
+python minicypt.py aes decrypt <encoded_text> --key <base64_key> --iv <base64_iv>
 ```
 
 ---
 
-## Licencja
+## License
 
-Projekt jest dostępny na licencji MIT.
+This project is licensed under the MIT License.
 
 ---
 
@@ -89,4 +89,4 @@ Projekt jest dostępny na licencji MIT.
 - **BTC**: ```bc1qp52tyf9hykehc4mjexj5ep36asjr0qskywzxtj```
 - **ETH**: ```0x73100e9DcA1C591d07AaDE2B61F30c00Dd6da379```
 
-Dziękuję za skorzystanie z MiniCrypt! 🔐
+Thank you for using MiniCrypt! 🔐
