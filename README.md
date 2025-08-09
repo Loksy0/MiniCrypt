@@ -84,9 +84,6 @@ Projekt jest dostępny na licencji MIT.
 
 ---
 
-
----
-
 Dziękuję za skorzystanie z MiniCrypt! 🔐
 
 ## Donation
